@@ -1,0 +1,23 @@
+{
+  "name": "via-servicios",
+  "version": "0.0.1",
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {
+    "critical": "^0.6.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-size": "^2.0.0",
+    "gulp-util": "^3.0.6",
+    "log": "^1.4.0",
+    "merge-stream": "^1.0.0",
+    "pug": "^2.0.0-beta11",
+    "util": "^0.10.3"
+  },
+  "engines": {}
+}
