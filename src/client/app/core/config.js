@@ -11,9 +11,15 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
   $stateProvider
     .state('home',{
       url:'/',
-      templateUrl : 'app/home/home.template.html',
-      controller: 'Home',
-      controllerAs: 'home'
+      templateUrl : 'app/home/home.template.html'
+    })
+    .state('privacy',{
+      url:'/aviso-de-privacidad',
+      templateUrl : 'app/home/home.privacy.html'
+    })
+    .state('confidenciality',{
+      url:'/confidencialidad',
+      templateUrl : 'app/home/home.confidenciality.html'
     })
       
   $urlRouterProvider.otherwise('/');
