@@ -11,7 +11,7 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
     //endbuild
 
   body
-    ui-view
+    ui-view.height-100
 
     // clear:js
     script(src="bower_components/angular/angular.js")
@@ -28,6 +28,7 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
 
     //controllers
     script(src="app/shell/shell.controller.js")
+    script(src="app/home/home.controller.js")
 
     // endinject
 
