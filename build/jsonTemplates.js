@@ -1,0 +1,1 @@
+angular.module("app.core").run(["$templateCache", function($templateCache) {$templateCache.put("app/lang/es.json","{\n \n}");}]);

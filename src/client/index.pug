@@ -3,7 +3,7 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
   head
     base(href="/")
     title
-      |Private Test
+      |Via Servicios
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(charset="utf-8")
     //build:css
@@ -33,20 +33,20 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
     // endinject
 
 
-    script.
-      // inject-angular-loader:js //
-      //
-    //- script(src="/bower_components/angular-loader/angular-loader.js")
-    script.
+  script.
+    // inject-angular-loader:js //
+    //
+  script(src="/bower_components/angular-loader/angular-loader.js")
+  script.
+    // endinject //
+    // inject-script:js //
+  script(src="/bower_components/script.js/dist/script.js")
+  script.
+    // endinject //
+    $script([
+      // inject:js //
       // endinject //
-      // inject-script:js //
-    //- script(src="/bower_components/script.js/dist/script.js")
-    script.
-      // endinject //
-      //- $script([
-        // inject:js //
-        // endinject //
-      //- ], 
-      //- function() {
-        //angular.bootstrap(document, ['app']);
-      //- });
+    ], 
+    function() {
+      //angular.bootstrap(document, ['app']);
+    });

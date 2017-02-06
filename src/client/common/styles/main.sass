@@ -11,13 +11,14 @@ body
   height: 100%
 
 #main-page
+  overflow: auto
   display: none
   &.active
     display: block
 
 #logo
   // width: 40%
-  margin: 100px auto
+  margin: 100px auto 70px auto
   text-align: center
   img
     width: 100%
@@ -48,11 +49,11 @@ body
     display: block
   .close
     cursor: pointer
-    width: 30px
-    height: 30px
+    width: 20px
+    height: 20px
     position: absolute
-    top: 50px
-    right: 50px
+    top: 30px
+    right: 0px
     background: url(/common/images/close.png)
     background-size: cover
 

@@ -7,7 +7,7 @@ var util = require('util');
 var critical = require('critical').stream;
 
 /* build*/
-gulp.task('build', ['rev-and-inject','images','fonts','conekta'], function() {
+gulp.task('build', ['rev-and-inject','images','fonts'], function() {
   log('Building the optimized app');
   return gulp.src('').pipe(plug.notify({
     onLast: true,
@@ -21,9 +21,9 @@ gulp.task('images', function() {
   log('Compressing, caching, and copying images');
   return gulp
     .src(paths.images)
-    .pipe(plug.cache(plug.imagemin({
+    .pipe(plug.imagemin({
         optimizationLevel: 3
-    })))
+    }))
     .pipe(gulp.dest(dest));
 });
 
@@ -31,6 +31,20 @@ gulp.task('fonts', function() {
   log('Copying fonts');
   return gulp
     .src(paths.fonts)
+    .pipe(gulp.dest(paths.build + 'common/fonts'));
+});
+
+gulp.task('sitemap', function() {
+  log('Copying Sitemap');
+  return gulp
+    .src(paths.sitemap)
+    .pipe(gulp.dest(paths.build));
+});
+
+gulp.task('awesome-fonts', function() {
+  log('Copying awesome-fonts');
+  return gulp
+    .src(paths.awesomeFonts)
     .pipe(gulp.dest(paths.build + 'fonts'));
 });
 
@@ -49,8 +63,8 @@ gulp.task('rev-and-inject', ['js', 'asyncLoaders', 'vendorjs', 'css'], function(
   var index = paths.client + 'index.html'; // New index.html path
   var minified = paths.build + '**/*.min.*';
   var minFilter = plug.filter(['**/*.min.*', '!**/*.map']);
-  var indexFilter = plug.filter(['index.html']);
-  var loadersFilter = plug.filter(['**/*.min.*', '!**/*.map.', '!angular-loader.min.js', '!script.min.js']);
+  var indexFilter = plug.filter(['index.html'],{restore:true});
+  var loadersFilter = plug.filter(['**/*.min.*', '!**/*.map.', '!angular-loader.min.js', '!script.min.js'],{restore:true});
 
   var angularLoader = {
     name: 'angular-loader',
@@ -86,7 +100,7 @@ gulp.task('rev-and-inject', ['js', 'asyncLoaders', 'vendorjs', 'css'], function(
     .pipe(loadersFilter)
     .pipe(plug.rev())
     .pipe(gulp.dest(paths.build))
-    .pipe(loadersFilter.restore())
+    .pipe(loadersFilter.restore)
     .pipe(indexFilter)
     .pipe(injectContents(angularLoader))
     .pipe(injectContents(script))
@@ -98,7 +112,7 @@ gulp.task('rev-and-inject', ['js', 'asyncLoaders', 'vendorjs', 'css'], function(
     .pipe(clear(js))
     .pipe(clear(css))
     .pipe(gulp.dest(paths.build)) // write the rev files
-    .pipe(indexFilter.restore()) // remove filter, back to original stream
+    .pipe(indexFilter.restore) // remove filter, back to original stream
     .pipe(plug.revReplace()) // Substitute in new filenames
     // .pipe(plug.removeHtmlComments())
     .pipe(gulp.dest(paths.build)) // write the index.html file changes
@@ -170,16 +184,6 @@ gulp.task('js', ['htmlTemplates', 'jsonTemplates'], function() {
     //.pipe(plug.sourcemaps.write('./'))
     .pipe(gulp.dest(paths.build));
 });
-
-
-// gulp.task('replaceCss', function () {
-//   console.log('Replace CSS files')
-//   gulp.src('src/client/index.html')
-//     .pipe(plug.htmlReplace({
-//         'css': 'common/all.min.css',
-//     }))
-//     .pipe(gulp.dest('build/'));
-// });
 
 
 gulp.task('htmlTemplates', function() {
@@ -264,25 +268,9 @@ function formatPercent(num, precision) {
   return (num * 100).toFixed(precision);
 }
 
-// gulp.task('critical', function () {
-//    critical.generate({
-//         base: 'build/',
-//         src: 'index.html',
-//         dest: 'common/all.min.css',
-//         minify: true
-//     }, function(err, output){
-//         critical.inline({
-//             base: 'build/',
-//             src: 'index.html',
-//             dest: 'build/index-critical.html',
-//             minify: true
-//         });        
-//     });
-// });
-
 gulp.task('critical', function () {
   return gulp.src('build/*.html')
-      .pipe(critical({base: 'build/', inline: true, css: ['build/common/all.min.css'], ignore:['.pure-u-1']}))
+      .pipe(critical({base: 'build/', inline: true, css: ['build/common/all.min.css']}))
       .pipe(gulp.dest('build'));
 });
 
