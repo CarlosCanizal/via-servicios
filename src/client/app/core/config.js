@@ -6,7 +6,7 @@ config.$inject = ['$locationProvider', '$urlRouterProvider','$stateProvider'];
 
 function config($locationProvider,$urlRouterProvider, $stateProvider) {
 
-  $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
   
   $stateProvider
     .state('home',{
@@ -14,6 +14,10 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
       templateUrl : 'app/home/home.template.html',
       controller: 'Home',
       controllerAs: 'home'
+    })
+    .state('privacy',{
+      url:'/confidencialidadyprivacidad',
+      templateUrl : 'app/privacy/privacy.template.html'
     })
       
   $urlRouterProvider.otherwise('/');

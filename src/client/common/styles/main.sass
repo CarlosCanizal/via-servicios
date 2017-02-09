@@ -12,7 +12,7 @@ body
 
 #main-page
   overflow: auto
-  display: none
+  // display: none
   &.active
     display: block
 
@@ -34,28 +34,33 @@ body
   margin-top: 20px
   span.separator
     padding: 0 10px
-  span
+    font-size: 24px
+  a, a:hover, a:active, a:visited
+    color: black
     font-family: 'bebas_neuelight'
     font-size: 24px
     cursor: pointer
+    text-decoration: none
 
 .lightbox
-  display: none
+  // display: none
   position: relative
   width: 80%
   margin: 0 auto
   height: 100%
   &.active
     display: block
-  .close
-    cursor: pointer
-    width: 20px
-    height: 20px
-    position: absolute
-    top: 30px
-    right: 0px
-    background: url(/common/images/close.png)
-    background-size: cover
+a.close
+  display: block
+  width: 20px
+  height: 20px
+  position: fixed
+  top: 50px
+  right: 50px
+  outline: 0
+  border: 0
+  img
+    width: 100%
 
 .lightbox-container
   margin: 0 auto
