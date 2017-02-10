@@ -15,8 +15,12 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
       controller: 'Home',
       controllerAs: 'home'
     })
+    .state('confidenciality',{
+      url:'/confidencialidad',
+      templateUrl : 'app/confidencialidad/confidencialidad.template.html'
+    })
     .state('privacy',{
-      url:'/confidencialidadyprivacidad',
+      url:'/privacidad',
       templateUrl : 'app/privacy/privacy.template.html'
     })
       
