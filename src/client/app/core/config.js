@@ -45,6 +45,15 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
         menu : 'distributor'
       }
     })
+    .state('contact',{
+      url:'/contacto',
+      templateUrl : 'app/contact/contact.template.html',
+      // controller: 'Home',
+      // controllerAs: 'home'
+      data:{
+        menu : 'contact'
+      }
+    })
     .state('confidenciality',{
       url:'/confidencialidad',
       templateUrl : 'app/confidencialidad/confidencialidad.template.html'

@@ -17,7 +17,8 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
   body
     #main
       #arrow
-        i.fa.fa-arrow-down
+        i.fa.fa-arrow-down(data-ng-show="shell.menu != 'contact'")
+        i.fa.fa-arrow-up(data-ng-show="shell.menu == 'contact'")
       #header
         #logo
           img(data-ng-src="common/images/logo.png")
