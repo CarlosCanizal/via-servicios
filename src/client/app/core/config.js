@@ -36,6 +36,15 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
         menu : 'services'
       }
     })
+    .state('distributor',{
+      url:'/como-ser-distribuidor',
+      templateUrl : 'app/distributor/distributor.template.html',
+      // controller: 'Home',
+      // controllerAs: 'home'
+      data:{
+        menu : 'distributor'
+      }
+    })
     .state('confidenciality',{
       url:'/confidencialidad',
       templateUrl : 'app/confidencialidad/confidencialidad.template.html'
