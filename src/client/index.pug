@@ -9,25 +9,33 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
     meta(charset="utf-8")
     //build:css
     link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="bower_components/font-awesome/css/font-awesome.min.css")
     link(rel="stylesheet", href="common/styles/fonts.css")
     link(rel="stylesheet", href="common/styles/main.css")
     //endbuild
 
   body
+    #arrow
+      i.fa.fa-arrow-down
     #header
       #logo
         img(data-ng-src="common/images/logo.png")
       #menu.clearfix
         nav
-          |contacto
+          span
+            |contacto
         nav
-          |¿Comó ser distribuidor?
+          span
+            |¿Comó ser distribuidor?
         nav
-          |Servicios
+          span
+            |Servicios
         nav
-          |Empresa
-        nav.active
-          |Inicio
+          span
+            |Empresa
+        nav
+          span.active
+            |Inicio
     ui-view.height-100
 
     // clear:js
