@@ -2,99 +2,10 @@ html
   height: 100%
 
 body
-  height: 100%
-  background: linear-gradient(125deg, rgba(255,255,255,1) 0%, rgba(199,199,199,1) 100%) fixed
+  height: 100%  
+  background: url('/common/images/background.png')
   margin: 0
   padding: 0
 
 .height-100
   height: 100%
-
-#main-page
-  overflow: auto
-  // display: none
-  &.active
-    display: block
-
-#logo
-  // width: 40%
-  margin: 100px auto 70px auto
-  text-align: center
-  img
-    width: 100%
-    max-width: 180px;
-
-#main-text
-  text-align: center
-  span.construction
-    font-family: 'bebas_neue_regular'
-    font-size: 50px
-
-.links
-  margin-top: 20px
-  span.separator
-    padding: 0 10px
-    font-size: 24px
-  a, a:hover, a:active, a:visited
-    color: black
-    font-family: 'bebas_neuelight'
-    font-size: 24px
-    cursor: pointer
-    text-decoration: none
-
-.lightbox
-  // display: none
-  position: relative
-  width: 80%
-  margin: 0 auto
-  // height: 100%
-  &.active
-    display: block
-a.close
-  display: block
-  width: 20px
-  height: 20px
-  position: fixed
-  top: 50px
-  right: 50px
-  outline: 0
-  border: 0
-  img
-    width: 100%
-
-.lightbox-container
-  margin: 0 auto
-  width: 80%
-  padding-top: 100px
-  // overflow: auto
-  h2
-    font-family: 'bebas_neue_regular'
-  .lightbox-text
-    font-family: 'bebas_neuebook'
-    // overflow: auto
-    // height: 400px
-    font-size: 18px
-    &.margin-bottom-100
-      margin-bottom: 100px
-
-
-
-/*fonts*/
-@font-face
-  font-family: 'bebas_neue_regular'
-  src: url('fonts/bebasneue_regular-webfont.woff2') format('woff2'),url('fonts/bebasneue_regular-webfont.woff') format('woff')
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: 'bebas_neuelight'
-  src: url('fonts/bebasneue_light-webfont.woff2') format('woff2'),url('fonts/bebasneue_light-webfont.woff') format('woff')
-  font-weight: normal
-  font-style: normal
-
-@font-face
-    font-family: 'bebas_neuebook'
-    src: url('fonts/bebasneue_book-webfont.woff2') format('woff2'),url('fonts/bebasneue_book-webfont.woff') format('woff')
-    font-weight: normal
-    font-style: normal
-/*fonts*/
