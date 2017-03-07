@@ -15,28 +15,29 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
     //endbuild
 
   body
-    #arrow
-      i.fa.fa-arrow-down
-    #header
-      #logo
-        img(data-ng-src="common/images/logo.png")
-      #menu.clearfix
-        nav
-          span
-            |contacto
-        nav
-          span
-            |¿Comó ser distribuidor?
-        nav
-          span
-            |Servicios
-        nav
-          span
-            |Empresa
-        nav
-          span.active
-            |Inicio
-    ui-view.height-100
+    #main
+      #arrow
+        i.fa.fa-arrow-down
+      #header
+        #logo
+          img(data-ng-src="common/images/logo.png")
+        #menu.clearfix
+          nav
+            a(ui-sref="contact",data-ng-class="{'active':shell.menu =='contact'}")
+              |contacto
+          nav
+            a(ui-sref="distributor",data-ng-class="{'active':shell.menu =='distributor'}")
+              |¿Comó ser distribuidor?
+          nav
+            a(ui-sref="services",data-ng-class="{'active':shell.menu =='services'}")
+              |Servicios
+          nav
+            a(ui-sref="company",data-ng-class="{'active':shell.menu =='company'}")
+              |Empresa
+          nav
+            a(ui-sref="home", data-ng-class="{'active':shell.menu =='home'}")
+              |Inicio
+      ui-view.height-100
 
     // clear:js
     script(src="bower_components/angular/angular.js")

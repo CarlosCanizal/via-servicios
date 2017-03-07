@@ -9,7 +9,14 @@
 
 
   function Shell($scope, $q){
-    // jshint validthis: true 
+    // jshint validthis: true
+    var shell = this;
+
+
+    $scope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
+      
+      shell.menu = toState.data && toState.data.menu ? toState.data.menu : null;
+    });
     
 
   }

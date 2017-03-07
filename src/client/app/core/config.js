@@ -13,7 +13,19 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
       url:'/',
       templateUrl : 'app/home/home.template.html',
       controller: 'Home',
-      controllerAs: 'home'
+      controllerAs: 'home',
+      data:{
+        menu : 'home'
+      }
+    })
+    .state('company',{
+      url:'/empresa',
+      templateUrl : 'app/company/company.template.html',
+      // controller: 'Home',
+      // controllerAs: 'home'
+      data:{
+        menu : 'company'
+      }
     })
     .state('confidenciality',{
       url:'/confidencialidad',

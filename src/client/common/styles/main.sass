@@ -1,6 +1,6 @@
 @import 'colors';
 
-/*general*/
+/*genera.acl*/
 html
   height: 100%
 
@@ -26,14 +26,20 @@ body
   margin-left: auto
   margin-right: auto
 
+a,a:link,a:active, a:hover, a:visited
+  text-decoration: none
+  outline: none
+  color: $text-color
+
 *
-  outline: solid 1px red
+  // outline: solid 1px red
 /*general*/
 
 /*header*/
-#header
+#main
   width: 70%
   margin: 0 auto
+#header
   padding: 20px 0
   position: relative
 
@@ -51,7 +57,7 @@ body
   nav
     float: right
     padding: 0 15px
-    span.active
+    a.active
       border-bottom: solid 3px $text-color
 
 #arrow
@@ -63,3 +69,33 @@ body
   i
     font-size: 4rem
 /*header*/
+
+.center-text
+  margin-top: 50px
+  margin-bottom: 30px
+  text-align: center
+  font-family: 'montserrat_thin'
+  font-size: 15px
+.center-line
+  width: 40%
+  height: 3px
+  margin: 0 auto
+  background-color: $text-color
+
+.circles-container
+  margin-top: 30px
+.circle
+  margin: 0 auto
+  width: 90%
+  // width: 150px
+  // height: 150px
+  // border: solid 3px $text-color
+  // border-radius: 50%
+  img
+    width: 100%
+
+
+
+
+
+
