@@ -27,6 +27,15 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
         menu : 'company'
       }
     })
+    .state('services',{
+      url:'/servicios',
+      templateUrl : 'app/services/services.template.html',
+      // controller: 'Home',
+      // controllerAs: 'home'
+      data:{
+        menu : 'services'
+      }
+    })
     .state('confidenciality',{
       url:'/confidencialidad',
       templateUrl : 'app/confidencialidad/confidencialidad.template.html'
