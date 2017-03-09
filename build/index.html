@@ -14,18 +14,90 @@
       }
 
       body {
-        background: linear-gradient(125deg,#fff 0,#c7c7c7 100%) fixed;
-        margin: 0;
         padding: 0;
       }
 
+      @font-face {
+        font-family: bebas_neue_regular;
+        src: url(common/fonts/bebasneue_regular-webfont.woff2) format("woff2"),url(common/fonts/bebasneue_regular-webfont.woff) format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background: url(/common/images/background.png);
+        margin: 0;
+        color: #FFF;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+        outline: 0;
+        color: #FFF;
+      }
+
+      #main {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      #header {
+        padding: 20px 0;
+        position: relative;
+      }
+
+      #logo {
+        position: absolute;
+        top: 20px;
+        left: 0;
+      }
+
+      #logo img {
+        width: 110px;
+      }
+
+      #menu {
+        font-family: bebas_neue_regular;
+        font-size: 20px;
+        padding-top: 52px;
+      }
+
+      #menu nav {
+        float: right;
+        padding: 0 15px;
+      }
+
+      #arrow {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+      }
+
+      #arrow i {
+        font-size: 4rem;
+      }
+
     </style>
-    <link rel="preload" href="common/all-ed10c5fe2c.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="common/all-ed10c5fe2c.min.css"></noscript>
+    <link rel="preload" href="common/all-fad34dd401.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="common/all-fad34dd401.min.css"></noscript>
     <script>!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
   </head>
   <body>
-    <ui-view class="height-100"></ui-view>
+    <div id="main">
+      <div id="arrow"><i class="fa fa-arrow-down" data-ng-show="shell.menu != 'contact'"></i><i class="fa fa-arrow-up" data-ng-show="shell.menu == 'contact'"></i></div>
+      <div id="header">
+        <div id="logo"><img data-ng-src="common/images/logo.png"></div>
+        <div class="clearfix" id="menu">
+          <nav><a ui-sref="contact" data-ng-class="{'active':shell.menu =='contact'}">contacto</a></nav>
+          <nav><a ui-sref="distributor" data-ng-class="{'active':shell.menu =='distributor'}">¿Comó ser distribuidor?</a></nav>
+          <nav><a ui-sref="services" data-ng-class="{'active':shell.menu =='services'}">Servicios</a></nav>
+          <nav><a ui-sref="company" data-ng-class="{'active':shell.menu =='company'}">Empresa</a></nav>
+          <nav><a ui-sref="home" data-ng-class="{'active':shell.menu =='home'}">Inicio</a></nav>
+        </div>
+      </div>
+      <ui-view class="height-100"></ui-view>
+    </div>
     <!-- clear:js-->
     
     <!-- endinject-->
@@ -40,7 +112,7 @@
     $script([
       // inject:js //
       '/vendor-e17cec4b4e.min.js',
-      '/all-9c321c6b70.min.js'
+      '/all-2a5e1062cc.min.js'
       // endinject //
     ], 
     function() {

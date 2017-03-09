@@ -20,6 +20,10 @@ body
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
   display: none !important
 
+.view-container
+  width: 100%
+  position: absolute
+
 .center-block
   float: none
   display: block
@@ -39,6 +43,7 @@ a,a:link,a:active, a:hover, a:visited
 #main
   width: 70%
   margin: 0 auto
+  position: relative
 #header
   padding: 20px 0
   position: relative
@@ -156,19 +161,15 @@ ul.list
   // outline: solid 1px red
   overflow: hidden
   position: relative
-  .carousel-box
-    height: 400px
   .carousel-riel
-    position: absolute
+    position: relative
     top: 0
     left: 0
     width: 3000px
-    height: 400px
     nav.item
       // outline: solid 1px black
       float: left
       width: 1000px
-      height: 400px
       position: relative
       overflow: hidden
       .text-image
@@ -215,6 +216,31 @@ ul.list
           background-color: #FFF
 /*carousel*/
 
-.clearfix
-  overflow: auto
-  zoom: 1
+.service-img
+  margin: 0 10px
+  width: 100px
+
+.padding-side
+  padding-left: 30px
+  text-align: center
+
+.services
+  width: 100%
+  margin: 100px auto
+.service-icon
+  padding-top: 40px
+  position: relative
+  text-align: right
+  padding-right: 20px
+  .vertical-separator
+    position: absolute
+    width: 3px
+    height: 50px
+    background-color: #FFF
+    right: 0px
+    top: 40px
+  img
+    width: 60px
+    margin-right: 20px
+  font-size: 1.9rem
+  font-family: 'montserrat_thin'

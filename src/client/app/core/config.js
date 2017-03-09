@@ -30,8 +30,8 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
     .state('services',{
       url:'/servicios',
       templateUrl : 'app/services/services.template.html',
-      // controller: 'Home',
-      // controllerAs: 'home'
+      controller: 'Services',
+      controllerAs: 'services',
       data:{
         menu : 'services'
       }
