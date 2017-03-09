@@ -1,2 +1,41 @@
-h1
-  |Via Servicios
+.carousel-container
+  .carousel-box
+    .carousel-riel
+      nav.item
+        .text-image
+          .main-title
+            div
+              |ENTENDEMOS
+            div
+              |TU MUNDO
+          .subtitle
+            |AL USAR VIA SERVICIOS OBTIENES VENTAJAS COMO LA POSIBILIDAD DE PAGAR TODAS TUS FACTURAS EN UN SOLO LUGAR.
+        .image
+          img(data-ng-src="common/images/image1.png")
+      nav.item
+        .text-image
+          .main-title
+            div
+              |ENTENDEMOS
+            div
+              |TU MUNDO
+          .subtitle
+            |AL USAR VIA SERVICIOS OBTIENES VENTAJAS COMO LA POSIBILIDAD DE PAGAR TODAS TUS FACTURAS EN UN SOLO LUGAR.
+        .image
+          img(data-ng-src="common/images/image1.png")
+      nav.item
+        .text-image
+          .main-title
+            div
+              |ENTENDEMOS
+            div
+              |TU MUNDO
+          .subtitle
+            |AL USAR VIA SERVICIOS OBTIENES VENTAJAS COMO LA POSIBILIDAD DE PAGAR TODAS TUS FACTURAS EN UN SOLO LUGAR.
+        .image
+          img(data-ng-src="common/images/image1.png")
+      .clearfix
+  .navs-container
+    .navs.clearfix
+      nav(data-ng-repeat="n in home.getNumber(home.items) track by $index", data-ng-class="{'active':home.selected == $index}", data-ng-click="home.selectIt($index)")
+        span
