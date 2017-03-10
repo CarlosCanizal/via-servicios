@@ -5,9 +5,9 @@
   .module('app.core')
   .controller('Services', Services);
 
-  Services.$inject = ['$scope','$interval'];
+  Services.$inject = ['$scope','$window','$interval'];
 
-  function Services($scope, $interval) {
+  function Services($scope, $window, $interval) {
     var service =  this;
     service.section = 'main';
 
@@ -18,12 +18,19 @@
     service.selected = 0;
 
     var totalWidth =  items*carouselWidth;
-    $('.carousel-riel').width(totalWidth);
-    $('nav.item').width(carouselWidth);
+    $('#services-carousel .carousel-riel').width(totalWidth);
+    $('#services-carousel nav.item').width(carouselWidth);
 
     service.getNumber = function(num) {
       return new Array(num);   
     }
+
+    angular.element($window).bind('resize', function(){
+      carouselWidth = $('.carousel-container').width();
+      totalWidth =  items*carouselWidth;
+      $('#services-carousel .carousel-riel').width(totalWidth);
+      $('#services-carousel  nav.item').width(carouselWidth);
+    });
 
     service.selectIt = function(index){
       service.selected = index;
@@ -34,7 +41,7 @@
     $interval(function(){
       var selected = service.selected+1 < service.items? ++service.selected: 0;
       service.selectIt(selected);
-    },5000)
+    },6000)
 
 
   }
