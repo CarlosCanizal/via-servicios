@@ -60,11 +60,17 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
     })
     .state('privacy',{
       url:'/privacidad',
-      templateUrl : 'app/privacy/privacy.template.html'
+      templateUrl : 'app/privacy/privacy.template.html',
+      data:{
+        menu : 'privacy'
+      }
     })
     .state('faq',{
       url:'/preguntas-frecuentes',
-      templateUrl : 'app/faq/faq.template.html'
+      templateUrl : 'app/faq/faq.template.html',
+      data:{
+        menu : 'faq'
+      }
     })
       
   $urlRouterProvider.otherwise('/');

@@ -1,70 +1,71 @@
 .view-container.anim-slide-below
-  #home-carousel.carousel-container
-    .carousel-riel.clearfix
-      nav.item.banner1
-        .text-image.left.banner1
-          .main-title
-            div
-              |CAMBIA TU FUTURO
-          .subtitle
-            div
-              |Forma parte de VIA SERVICIOS sin costo de afiliación 
-            div
-              |ni invertir en equipos adicionales. REGÍSTRATE AHORA
-          .mobile-image
-            img(src="common/images/banner1-mobile.png")
-      nav.item.banner2
-        .text-image.right.banner2
-          .main-title
+  .general-container
+    #home-carousel.carousel-container
+      .carousel-riel.clearfix
+        nav.item.banner1
+          .text-image.left.banner1
+            .main-title
+              div
+                |CAMBIA TU FUTURO
+            .subtitle
+              div
+                |Forma parte de VIA SERVICIOS sin costo de afiliación 
+              div
+                |ni invertir en equipos adicionales. REGÍSTRATE AHORA
+            .mobile-image
+              img(src="common/images/banner1-mobile.png")
+        nav.item.banner2
+          .text-image.right.banner2
+            .main-title
+              .main-title.align-right
+                div
+                  |PAGA 
+                div
+                  |LO QUE QUIERAS
+              //- div
+                |TU MUNDO
+            .subtitle.align-right
+              div
+                |Puedes pagar más de 400 servicios y tener 
+              div
+                |tiempo para hacer lo que más te gusta.
+            .mobile-image
+              img(src="common/images/banner2-mobile.png")
+          //- .image
+            img(data-ng-src="common/images/banner2.png")
+        nav.item.banner3
+          .text-image.left.banner3
+            .main-title
+              div
+                |PAGA RÁPIDO
+              div
+                |Y MUY SENCILLO
+            .subtitle
+              div
+                |Con VIA SERVICIOS tu pago se registra al instante,
+              div
+                |sin retrasos ni complicaciones.
+            .mobile-image
+              img(src="common/images/banner3-mobile.png")
+          //- .image
+            img(data-ng-src="common/images/banner4.png")
+        nav.item.banner4
+          .text-image.right.banner4
             .main-title.align-right
+              div.align-right
+                | APROVECHA TU TIEMPO
+              //- div
+                |Y MUY SENCILLO
+            .subtitle.align-right
               div
-                |PAGA 
+                |Paga todos tus servicios en un mismo lugar.
               div
-                |LO QUE QUIERAS
-            //- div
-              |TU MUNDO
-          .subtitle.align-right
-            div
-              |Puedes pagar más de 400 servicios y tener 
-            div
-              |tiempo para hacer lo que más te gusta.
-          .mobile-image
-            img(src="common/images/banner2-mobile.png")
-        //- .image
-          img(data-ng-src="common/images/banner2.png")
-      nav.item.banner3
-        .text-image.left.banner3
-          .main-title
-            div
-              |PAGA RÁPIDO
-            div
-              |Y MUY SENCILLO
-          .subtitle
-            div
-              |Con VIA SERVICIOS tu pago se registra al instante,
-            div
-              |sin retrasos ni complicaciones.
-          .mobile-image
-            img(src="common/images/banner3-mobile.png")
-        //- .image
-          img(data-ng-src="common/images/banner4.png")
-      nav.item.banner4
-        .text-image.right.banner4
-          .main-title.align-right
-            div.align-right
-              | APROVECHA TU TIEMPO
-            //- div
-              |Y MUY SENCILLO
-          .subtitle.align-right
-            div
-              |Paga todos tus servicios en un mismo lugar.
-            div
-              |Olvídate de las filas en menos tiempo.
-          .mobile-image
-            img(src="common/images/banner4-mobile.png")
-        //- .image
-          img(data-ng-src="common/images/banner3.png")
-    .navs-container
-      .navs.clearfix
-        nav(data-ng-repeat="n in home.getNumber(home.items) track by $index", data-ng-class="{'active':home.selected == $index}", data-ng-click="home.selectIt($index)")
-          span
+                |Olvídate de las filas en menos tiempo.
+            .mobile-image
+              img(src="common/images/banner4-mobile.png")
+          //- .image
+            img(data-ng-src="common/images/banner3.png")
+      .navs-container
+        .navs.clearfix
+          nav(data-ng-repeat="n in home.getNumber(home.items) track by $index", data-ng-class="{'active':home.selected == $index}", data-ng-click="home.selectIt($index)")
+            span

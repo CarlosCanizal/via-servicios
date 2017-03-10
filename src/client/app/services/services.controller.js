@@ -11,8 +11,8 @@
     var service =  this;
     service.section = 'main';
 
-    var carouselWidth = $('.carousel-container').width();
-    var items =  $('nav.item').length;
+    var carouselWidth = $('#services-carousel.carousel-container').width();
+    var items =  $('#services-carousel nav.item').length;
     service.items =  items;
 
     service.selected = 0;
@@ -38,10 +38,10 @@
       $('.carousel-riel').animate({left: left}, 300);
     }
 
-    $interval(function(){
-      var selected = service.selected+1 < service.items? ++service.selected: 0;
-      service.selectIt(selected);
-    },6000)
+    // $interval(function(){
+    //   var selected = service.selected+1 < service.items? ++service.selected: 0;
+    //   service.selectIt(selected);
+    // },6000)
 
 
   }

@@ -11,8 +11,8 @@
     var home =  this;
     home.section = 'main';
 
-    var carouselWidth = $('.carousel-container').width();
-    var items =  $('nav.item').length;
+    var carouselWidth = $('#home-carousel.carousel-container').width();
+    var items =  $('#home-carousel nav.item').length;
     home.items =  items;
 
     home.selected = 0;
@@ -45,7 +45,7 @@
     $interval(function(){
       var selected = home.selected+1 < home.items? ++home.selected: 0;
       home.selectIt(selected);
-    },6000)
+    },8000)
 
 
   }

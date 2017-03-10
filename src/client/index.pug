@@ -18,13 +18,13 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
 
   body
     #main
-      #arrow
+      //- #arrow
         i.fa.fa-arrow-down(data-ng-show="shell.menu != 'contact'")
         i.fa.fa-arrow-up(data-ng-show="shell.menu == 'contact'")
       #header
         #logo
           img(data-ng-src="common/images/logo.png")
-        #menu-mobile
+        #menu-mobile(data-ng-class="{'hide-it':shell.menu == 'privacy' || shell.menu == 'faq' }")
           nav
             a(ui-sref="home", data-ng-class="{'active':shell.menu =='home'}")
               |Inicio
@@ -36,11 +36,11 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
               |Servicios
           nav
             a(ui-sref="distributor",data-ng-class="{'active':shell.menu =='distributor'}")
-              |¿Cómo ser distribuidor?
+            |¿Cómo ser distribuidor?
           nav
             a(ui-sref="contact",data-ng-class="{'active':shell.menu =='contact'}")
               |Contacto
-        #menu.clearfix
+        #menu.clearfix(data-ng-class="{'hide-it':shell.menu == 'privacy' || shell.menu == 'faq' }")
           nav
             a(ui-sref="contact",data-ng-class="{'active':shell.menu =='contact'}")
               |Contacto

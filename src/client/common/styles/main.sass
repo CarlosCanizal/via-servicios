@@ -24,6 +24,11 @@ body
   width: 100%
   position: absolute
 
+.general-container
+  width: 100%
+  max-width: 1000px
+  margin: 0 auto
+
 .center-block
   float: none
   display: block
@@ -106,10 +111,13 @@ a,a:link,a:active, a:hover, a:visited
   background-color: $text-color
 
 .circles-container
-  margin-top: 30px
+  width: 100%
+  margin: 50px auto
+  max-width: 800px
 .circle
   margin: 0 auto
-  width: 90%
+  padding: 0 20px
+  text-align: center
   // width: 150px
   // height: 150px
   // border: solid 3px $text-color
@@ -192,22 +200,22 @@ ul.list
       position: relative
       overflow: hidden
       &.banner1
-        height: 350px
+        height: 400px
         background: url(/common/images/banner1.png) no-repeat
         background-position: bottom
         background-size: 100% auto
       &.banner2
-        height: 350px
+        height: 400px
         background: url(/common/images/banner2.png) no-repeat
         background-position: bottom
         background-size: 100% auto
       &.banner3
-        height: 350px
+        height: 400px
         background: url(/common/images/banner3.png) no-repeat
         background-position: bottom
         background-size: 100% auto
       &.banner4
-        height: 350px
+        height: 400px
         background: url(/common/images/banner4.png) no-repeat
         background-position: bottom
         background-size: 100% auto
@@ -296,7 +304,7 @@ img.service-img
   left: 0px
   top: 30px
   &.services2
-    top: 40px
+    top: 10px
   &.services4
     top: 50px
   &.services5
@@ -337,8 +345,9 @@ img.service-img
 .privacy
   margin-top: 30px
   font-family: 'montserrat_thin'
+  text-align: left
   nav
-    display: inline-block
+    display: inline
     &.separator
       padding-right: 20px
       border-right: solid 1px white
@@ -346,6 +355,8 @@ img.service-img
       padding-left: 20px
 
 .general-info
+  position: relative
+  // margin-top: 100px
   margin-bottom: 30px
   font-family: 'montserrat_thin'
   .question-title
@@ -356,3 +367,18 @@ img.service-img
     position: relative
     top: -10px
     font-size: 1rem
+
+a.close-button
+  display: block
+  width: 50px
+  height: 50px
+  position: absolute
+  top: -100px
+  right: 0px
+  outline: 0
+  z-index: 2
+  img
+    width: 100%
+
+.hide-it
+  visibility: hidden
