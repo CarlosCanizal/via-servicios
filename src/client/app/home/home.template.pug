@@ -1,39 +1,63 @@
 .view-container.anim-slide-below
   .carousel-container
     .carousel-riel.clearfix
-      nav.item
-        .text-image
+      nav.item.banner1
+        .text-image.left.banner1
           .main-title
             div
-              |ENTENDEMOS
-            div
+              |CAMBIA TU FUTURO
+            //- div
               |TU MUNDO
           .subtitle
-            |AL USAR VIA SERVICIOS OBTIENES VENTAJAS COMO LA POSIBILIDAD DE PAGAR TODAS TUS FACTURAS EN UN SOLO LUGAR.
-        .image
-          img(data-ng-src="common/images/image1.png")
-      nav.item
-        .text-image
+            div
+              |Forma parte de VIA SERVICIOS sin costo de afiliación 
+            div
+              |ni invertir en equipos adicionales. REGÍSTRATE AHORA
+      nav.item.banner2
+        .text-image.right.banner2
+          .main-title
+            .main-title.align-right
+              div
+                |PAGA 
+              div
+                |LO QUE QUIERAS
+            //- div
+              |TU MUNDO
+          .subtitle.align-right
+            div
+              |Puedes pagar más de 400 servicios y tener 
+            div
+              |tiempo para hacer lo que más te gusta.
+        //- .image
+          img(data-ng-src="common/images/banner2.png")
+      nav.item.banner3
+        .text-image.left.banner3
           .main-title
             div
-              |ENTENDEMOS
+              |PAGA RÁPIDO
             div
-              |TU MUNDO
+              |Y MUY SENCILLO
           .subtitle
-            |AL USAR VIA SERVICIOS OBTIENES VENTAJAS COMO LA POSIBILIDAD DE PAGAR TODAS TUS FACTURAS EN UN SOLO LUGAR.
-        .image
-          img(data-ng-src="common/images/image1.png")
-      nav.item
-        .text-image
-          .main-title
             div
-              |ENTENDEMOS
+              |Con VIA SERVICIOS tu pago se registra al instante,
             div
-              |TU MUNDO
-          .subtitle
-            |AL USAR VIA SERVICIOS OBTIENES VENTAJAS COMO LA POSIBILIDAD DE PAGAR TODAS TUS FACTURAS EN UN SOLO LUGAR.
-        .image
-          img(data-ng-src="common/images/image1.png")
+              |sin retrasos ni complicaciones.
+        //- .image
+          img(data-ng-src="common/images/banner4.png")
+      nav.item.banner4
+        .text-image.right.banner4
+          .main-title.align-right
+            div.align-right
+              | APROVECHA TU TIEMPO
+            //- div
+              |Y MUY SENCILLO
+          .subtitle.align-right
+            div
+              |Paga todos tus servicios en un mismo lugar.
+            div
+              |Olvídate de las filas en menos tiempo.
+        //- .image
+          img(data-ng-src="common/images/banner3.png")
     .navs-container
       .navs.clearfix
         nav(data-ng-repeat="n in home.getNumber(home.items) track by $index", data-ng-class="{'active':home.selected == $index}", data-ng-click="home.selectIt($index)")

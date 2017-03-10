@@ -5,9 +5,9 @@
   .module('app.core')
   .controller('Services', Services);
 
-  Services.$inject = ['$scope'];
+  Services.$inject = ['$scope','$interval'];
 
-  function Services($scope) {
+  function Services($scope, $interval) {
     var service =  this;
     service.section = 'main';
 
@@ -30,6 +30,11 @@
       var left = index*carouselWidth*-1;
       $('.carousel-riel').animate({left: left}, 300);
     }
+
+    // $interval(function(){
+    //   var selected = service.selected+1 < service.items? ++service.selected: 0;
+    //   service.selectIt(selected);
+    // },5000)
 
 
   }

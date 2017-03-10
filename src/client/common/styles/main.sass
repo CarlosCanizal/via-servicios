@@ -116,6 +116,8 @@ ul.list
 
 .align-right
   text-align: right
+.align-center
+  text-align: center
 
 .margin-top-4
   margin-top: 4rem
@@ -165,25 +167,56 @@ ul.list
     position: relative
     top: 0
     left: 0
-    width: 3000px
+    // width: 3000px
     nav.item
       // outline: solid 1px black
       float: left
       width: 1000px
       position: relative
       overflow: hidden
+      &.banner1
+        height: 400px
+        background: url(/common/images/banner1.png) no-repeat
+        background-position: bottom
+        background-size: 100% auto
+      &.banner2
+        height: 400px
+        background: url(/common/images/banner2.png) no-repeat
+        background-position: bottom
+        background-size: 100% auto
+      &.banner3
+        height: 400px
+        background: url(/common/images/banner3.png) no-repeat
+        background-position: bottom
+        background-size: 100% auto
+      &.banner4
+        height: 400px
+        background: url(/common/images/banner4.png) no-repeat
+        background-position: bottom
+        background-size: 100% auto
       .text-image
-        width: 300px
+        width: 50%
         position: absolute
-        top: 0
-        left: 0
+        // top: 0
+        &.left
+          left: 0
+        &.right
+          right: 0
+        &.banner1
+          bottom: 80px
+        &.banner2
+          bottom: 150px
+        &.banner3
+          bottom: 200px
+        &.banner4
+          bottom: 100px
         .main-title
           font-family: 'bebas_neue_regular'
-          font-size: 4.3rem
-          line-height: 4.3rem
+          font-size: 4rem
+          line-height: 4rem
         .subtitle
-        font-family: 'bebas_neuelight'
-        font-size: 2.3rem
+          font-family: 'bebas_neuelight'
+          font-size: 2rem
 
       .image
         // overflow: hidden
@@ -216,31 +249,74 @@ ul.list
           background-color: #FFF
 /*carousel*/
 
-.service-img
-  margin: 0 10px
+.icons-container
+  position: relative
+  margin-bottom: 10px
+  padding-left: 50px
+  text-align: left
+img.service-img
+  margin: 0 15px
   width: 100px
+  &.x-small
+    width: 60px
+  &.small
+    width: 80px
+  &.big
+    width: 140px
 
 .padding-side
-  padding-left: 30px
-  text-align: center
+  margin-left: 50px
+
+  // text-align: center
+  // position: relative
+  display: inline-block
+
+.vertical-separator
+  position: absolute
+  width: 3px
+  height: 50px
+  background-color: #FFF
+  left: 0px
+  top: 30px
+  &.services2
+    top: 40px
+  &.services4
+    top: 50px
+  &.services5
+    top: 30px
+  &.services6
+    top: 30px
+  &.services7
+    top: 20px
 
 .services
   width: 100%
   margin: 100px auto
 .service-icon
-  padding-top: 40px
+  position: relative
+  display: inline-block
+  // top: -20px
   position: relative
   text-align: right
   padding-right: 20px
-  .vertical-separator
-    position: absolute
-    width: 3px
-    height: 50px
-    background-color: #FFF
-    right: 0px
-    top: 40px
+  &.services1
+    top: -20px
+  &.services3
+    top: -30px
+  &.services4
+    top: -30px
+  &.services5
+    top: -30px
+  &.services6
+    top: 0px
+  &.services7
+    top: -20px
   img
     width: 60px
     margin-right: 20px
   font-size: 1.9rem
   font-family: 'montserrat_thin'
+
+/*animate*/
+
+/*animate*/
