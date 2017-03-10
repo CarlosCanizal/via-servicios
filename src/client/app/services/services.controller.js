@@ -31,10 +31,10 @@
       $('.carousel-riel').animate({left: left}, 300);
     }
 
-    // $interval(function(){
-    //   var selected = service.selected+1 < service.items? ++service.selected: 0;
-    //   service.selectIt(selected);
-    // },5000)
+    $interval(function(){
+      var selected = service.selected+1 < service.items? ++service.selected: 0;
+      service.selectIt(selected);
+    },5000)
 
 
   }

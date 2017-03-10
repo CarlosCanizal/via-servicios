@@ -19,9 +19,12 @@
     margin-bottom: 50px
 
   .text-box
-    margin-top: 30px
-    padding-left: 0
-    text-align: center
+    &.margin-top-10
+      margin-top: 10rem
+    padding-left: 0px
+    i
+      font-size: 2.5rem
+      margin-left: 10px
 
   .carousel-container
     .carousel-riel
@@ -122,6 +125,11 @@
   .text
     margin-top: 0px
 
+  .privacy
+    text-align: center
+    font-size: 1.1rem
+    margin-bottom: 30px
+
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 990px)
@@ -148,28 +156,28 @@
     .carousel-riel
       nav.item
         &.banner1
-          height: 400px
+          height: 350px
           background: url(/common/images/banner1.png) no-repeat
           background-position: bottom
           background-size: 100% auto
         &.banner2
-          height: 400px
+          height: 350px
           background: url(/common/images/banner2.png) no-repeat
           background-position: bottom
           background-size: 100% auto
         &.banner3
-          height: 400px
+          height: 350px
           background: url(/common/images/banner3.png) no-repeat
           background-position: bottom
           background-size: 100% auto
         &.banner4
-          height: 400px
+          height: 350px
           background: url(/common/images/banner4.png) no-repeat
           background-position: bottom
           background-size: 100% auto
         .text-image
           position: absolute
-          width: 50%
+          width: 40%
           text-align: left
           margin-bottom: 0
           .main-title
@@ -196,41 +204,41 @@
       display: none
       img
         width: 100%
-    .services
-      margin: 100px auto
-    .service-icon
-      position: relative
-      display: inline-block
-      &.services1
-        top: -20px
-      &.services3
-        top: -30px
-      &.services4
-        top: -30px
-      &.services5
-        top: -30px
-      &.services6
-        top: 0px
-      &.services7
-        top: -20px
-    .vertical-separator
-      display: block
+  .services
+    margin: 100px auto
+  .service-icon
+    position: relative
+    display: inline-block
+    &.services1
+      top: -20px
+    &.services3
+      top: -30px
+    &.services4
+      top: -30px
+    &.services5
+      top: -30px
+    &.services6
+      top: 0px
+    &.services7
+      top: -20px
+  .vertical-separator
+    display: block
 
-    .icons-container
-      margin-bottom: 10px
-      padding-left: 50px
-      text-align: left
+  .icons-container
+    margin-bottom: 10px
+    padding-left: 50px
+    text-align: left
 
-    .service-icon
-      text-align: right
-      padding-right: 20px
-      margin-bottom: 0px
+  .service-icon
+    text-align: right
+    padding-right: 20px
+    margin-bottom: 0px
 
-    .padding-side
-      margin-left: 50px
+  .padding-side
+    margin-left: 50px
 
-    .horizontal-separator
-      display: none
+  .horizontal-separator
+    display: none
 
   #logo
     position: absolute
@@ -243,6 +251,9 @@
 
   .text
     margin-top: 30px
+
+  .privacy
+    font-size: 1.5rem
 /* Medium Devices, Desktops */
 // @media only screen and (min-width : 1100px)
 
