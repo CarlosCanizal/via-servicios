@@ -24,10 +24,26 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
       #header
         #logo
           img(data-ng-src="common/images/logo.png")
+        #menu-mobile
+          nav
+            a(ui-sref="home", data-ng-class="{'active':shell.menu =='home'}")
+              |Inicio
+          nav
+            a(ui-sref="company",data-ng-class="{'active':shell.menu =='company'}")
+              |Empresa
+          nav
+            a(ui-sref="services",data-ng-class="{'active':shell.menu =='services'}")
+              |Servicios
+          nav
+            a(ui-sref="distributor",data-ng-class="{'active':shell.menu =='distributor'}")
+              |¿Cómo ser distribuidor?
+          nav
+            a(ui-sref="contact",data-ng-class="{'active':shell.menu =='contact'}")
+              |Contacto
         #menu.clearfix
           nav
             a(ui-sref="contact",data-ng-class="{'active':shell.menu =='contact'}")
-              |contacto
+              |Contacto
           nav
             a(ui-sref="distributor",data-ng-class="{'active':shell.menu =='distributor'}")
               |¿Cómo ser distribuidor?
