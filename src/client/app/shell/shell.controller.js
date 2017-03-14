@@ -23,33 +23,33 @@
       $scope.sectionIndex = $scope.sections.indexOf(shell.menu);
     });
 
-    $(window).on('mousewheel DOMMouseScroll',debounce(function (e) {
-      var direction = (function () {
-        var delta = (e.type === 'DOMMouseScroll' ?
-                     e.originalEvent.detail * -40 :
-                     e.originalEvent.wheelDelta);
+    // $(window).on('mousewheel DOMMouseScroll',debounce(function (e) {
+    //   var direction = (function () {
+    //     var delta = (e.type === 'DOMMouseScroll' ?
+    //                  e.originalEvent.detail * -40 :
+    //                  e.originalEvent.wheelDelta);
 
-        return delta > 0 ? 0 : 1;
-      }());
+    //     return delta > 0 ? 0 : 1;
+    //   }());
 
 
-      if(direction === 1) {
-        if($(window).scrollTop() + $(window).height() == $(document).height()){
-          if($scope.sectionIndex+1 < $scope.sections.length){
-            var newSection =  $scope.sections[$scope.sectionIndex+1];
-            $state.go(newSection);
-          }
-        }
-      }
-      if(direction === 0) {
-        if($('body').scrollTop() == 0){
-          if($scope.sectionIndex-1 >= 0){
-            var newSection =  $scope.sections[$scope.sectionIndex-1];
-            $state.go(newSection);
-          }
-        }
-      }
-    },200, true));
+    //   if(direction === 1) {
+    //     if($(window).scrollTop() + $(window).height() == $(document).height()){
+    //       if($scope.sectionIndex+1 < $scope.sections.length){
+    //         var newSection =  $scope.sections[$scope.sectionIndex+1];
+    //         $state.go(newSection);
+    //       }
+    //     }
+    //   }
+    //   if(direction === 0) {
+    //     if($('body').scrollTop() == 0){
+    //       if($scope.sectionIndex-1 >= 0){
+    //         var newSection =  $scope.sections[$scope.sectionIndex-1];
+    //         $state.go(newSection);
+    //       }
+    //     }
+    //   }
+    // },200, true));
   }
 
 })();

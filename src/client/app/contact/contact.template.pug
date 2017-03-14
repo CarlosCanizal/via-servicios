@@ -2,25 +2,31 @@
   .text
     .form-box
       .fluid-container
-        form(novalidate)
           .row
             .col-xs-12.col-md-6
-              .input-row.left
-                input(placeholder="*NOMBRE")
-              .input-row.left
-                input(placeholder="*CORREO ELECTRÓNICO")
-              .input-row.left
-                textarea(placeholder="*MENSAJE")
-              .input-row.left.align-right
-                button(type="submit")
-                  |ENVIAR
-              .privacy
-                nav.separator
-                  a(ui-sref="privacy")
-                    |PRIVACIDAD
-                nav.separator-left
-                  a(ui-sref="faq")
-                    |PREGUNTAS FRECUENTES
+              .align-center(data-ng-if="contact.error")
+                span.error-message
+                  |Todos los campos son requeridos.
+              .align-center(data-ng-if="contact.success")
+                span.success-message
+                  |¡Gracias! Pronto nos pondremos en contacto contigo.
+              form(data-ng-if="!contact.success", name="contact.form",data-ng-submit="contact.send()",novalidate)
+                .input-row.left
+                  input(data-ng-model="contact.info.name",placeholder="*NOMBRE", required)
+                .input-row.left
+                  input(data-ng-model="contact.info.email", placeholder="*CORREO ELECTRÓNICO", required)
+                .input-row.left
+                  textarea(data-ng-model="contact.info.message", placeholder="*MENSAJE", required)
+                .input-row.left.align-right
+                  button(type="submit")
+                    |ENVIAR
+                .privacy
+                  nav.separator
+                    a(ui-sref="privacy")
+                      |PRIVACIDAD
+                  nav.separator-left
+                    a(ui-sref="faq")
+                      |PREGUNTAS FRECUENTES
             .col-xs-12.col-md-6
               .text-box
                 div
@@ -30,8 +36,8 @@
                 div
                   |Del Miguel Hidalgo. Ciudad de México
                 div
-                  |5555 555.
-              .text-box.margin-top-4
+                  |01 800 841 0841.
+              //- .text-box.margin-top-4
                 div
                   |info@viaservicios.com.mx
               .text-box.margin-top-10
@@ -39,5 +45,5 @@
                   i.fa.fa-facebook-square
                 a(href="https://www.instagram.com/viaserviciosmexico/" target="_blank")
                   i.fa.fa-instagram
-                a(href="https://www.twitter.com/viaserviciosmexico/" target="_blank")
+                a(href="https://twitter.com/ViaServiciosMex" target="_blank")
                   i.fa.fa-twitter

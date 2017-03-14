@@ -26,7 +26,7 @@
     }
 
     angular.element($window).bind('resize', function(){
-      carouselWidth = $('.carousel-container').width();
+      carouselWidth = $('#services-carousel.carousel-container').width();
       totalWidth =  items*carouselWidth;
       $('#services-carousel .carousel-riel').width(totalWidth);
       $('#services-carousel  nav.item').width(carouselWidth);
@@ -35,14 +35,8 @@
     service.selectIt = function(index){
       service.selected = index;
       var left = index*carouselWidth*-1;
-      $('.carousel-riel').animate({left: left}, 300);
+      $('#services-carousel .carousel-riel').animate({left: left}, 300);
     }
-
-    // $interval(function(){
-    //   var selected = service.selected+1 < service.items? ++service.selected: 0;
-    //   service.selectIt(selected);
-    // },6000)
-
 
   }
 

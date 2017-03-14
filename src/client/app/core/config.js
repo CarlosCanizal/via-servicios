@@ -39,8 +39,8 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
     .state('distributor',{
       url:'/como-ser-distribuidor',
       templateUrl : 'app/distributor/distributor.template.html',
-      // controller: 'Home',
-      // controllerAs: 'home'
+      controller: 'Distributor',
+      controllerAs: 'distributor',
       data:{
         menu : 'distributor'
       }
@@ -48,8 +48,8 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
     .state('contact',{
       url:'/contacto',
       templateUrl : 'app/contact/contact.template.html',
-      // controller: 'Home',
-      // controllerAs: 'home'
+      controller: 'Contact',
+      controllerAs: 'contact',
       data:{
         menu : 'contact'
       }

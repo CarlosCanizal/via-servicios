@@ -18,14 +18,14 @@
     home.selected = 0;
 
     var totalWidth =  items*carouselWidth;
-    var totalHeight = $('.carousel-container').height();
+    var totalHeight = $('#home-carousel.carousel-container').height();
     $('#home-carousel .carousel-riel').width(totalWidth);
     $('#home-carousel  nav.item').width(carouselWidth);
     
     angular.element($window).bind('resize', function(){
-      carouselWidth = $('.carousel-container').width();
+      carouselWidth = $('#home-carousel.carousel-container').width();
       totalWidth =  items*carouselWidth;
-      totalHeight = $('.carousel-container').height();
+      totalHeight = $('#home-carousel.carousel-container').height();
       $('#home-carousel .carousel-riel').width(totalWidth);
       $('#home-carousel  nav.item').width(carouselWidth);
     });
@@ -39,13 +39,13 @@
     home.selectIt = function(index){
       home.selected = index;
       var left = index*carouselWidth*-1;
-      $('.carousel-riel').animate({left: left}, 300);
+      $('#home-carousel .carousel-riel').animate({left: left}, 300);
     }
 
-    $interval(function(){
-      var selected = home.selected+1 < home.items? ++home.selected: 0;
-      home.selectIt(selected);
-    },8000)
+    // $interval(function(){
+    //   var selected = home.selected+1 < home.items? ++home.selected: 0;
+    //   home.selectIt(selected);
+    // },8000)
 
 
   }

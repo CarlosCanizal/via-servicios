@@ -3,7 +3,7 @@
   angular.module('app.core', [
     'ngAnimate',
     'ui.router',
-    'swipe',
+    'restangular',
     'anim-in-out',
     'app.core'
   ]);
