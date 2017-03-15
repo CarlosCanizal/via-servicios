@@ -7,7 +7,7 @@ var util = require('util');
 var critical = require('critical').stream;
 
 /* build*/
-gulp.task('build', ['rev-and-inject','images','fonts'], function() {
+gulp.task('build', ['rev-and-inject','images','fonts','awesome-fonts', 'sitemap'], function() {
   log('Building the optimized app');
   return gulp.src('').pipe(plug.notify({
     onLast: true,
@@ -21,9 +21,9 @@ gulp.task('images', function() {
   log('Compressing, caching, and copying images');
   return gulp
     .src(paths.images)
-    .pipe(plug.imagemin({
+    .pipe(plug.cache(plug.imagemin({
         optimizationLevel: 3
-    }))
+    })))
     .pipe(gulp.dest(dest));
 });
 
@@ -48,12 +48,12 @@ gulp.task('awesome-fonts', function() {
     .pipe(gulp.dest(paths.build + 'fonts'));
 });
 
-gulp.task('conekta', function() {
-  log('Copying conekta');
-  return gulp
-    .src(paths.conekta)
-    .pipe(gulp.dest(paths.build + 'common/js'));
-});
+// gulp.task('conekta', function() {
+//   log('Copying conekta');
+//   return gulp
+//     .src(paths.conekta)
+//     .pipe(gulp.dest(paths.build + 'common/js'));
+// });
 
 gulp.task('rev-and-inject', ['js', 'asyncLoaders', 'vendorjs', 'css'], function() {
   log('Building index.html');
@@ -270,12 +270,13 @@ function formatPercent(num, precision) {
 
 gulp.task('critical', function () {
   return gulp.src('build/*.html')
-      .pipe(critical({base: 'build/', inline: true, css: ['build/common/all.min.css']}))
+      .pipe(critical({base: 'build/', inline: true, css: ['build/common/all.min.css'], ignore:['.pure-u-1']}))
       .pipe(gulp.dest('build'));
 });
 
 
 gulp.task('clean', function () {
+  plug.cache.clearAll();
   return gulp.src([paths.build], { read: false }).pipe(plug.clean());
 });
 

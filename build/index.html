@@ -7,6 +7,76 @@
     <link rel="shortcut icon" type="image/png" href="common/images/favicon.png">
     <meta charset="utf-8">
     <style type="text/css">
+      html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      nav {
+        display: block;
+      }
+
+      a {
+        background-color: transparent;
+      }
+
+      img {
+        border: 0;
+      }
+
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      :after,
+      :before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+      }
+
+      a {
+        color: #337ab7;
+        text-decoration: none;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+      .clearfix:after,
+      .clearfix:before {
+        display: table;
+        content: " ";
+      }
+
+      .clearfix:after {
+        clear: both;
+      }
+
+      @-ms-viewport {
+        width: device-width;
+      }
+
       .height-100,
       body,
       html {
@@ -15,6 +85,16 @@
 
       body {
         padding: 0;
+      }
+
+      #menu,
+      #menu-mobile {
+        font-family: bebas_neue_regular;
+        padding-top: 52px;
+      }
+
+      #menu-mobile {
+        text-align: center;
       }
 
       @font-face {
@@ -28,6 +108,11 @@
         background: url(/common/images/background.png);
         margin: 0;
         color: #FFF;
+      }
+
+      #header,
+      #main {
+        position: relative;
       }
 
       a,
@@ -44,7 +129,6 @@
 
       #header {
         padding: 20px 0;
-        position: relative;
       }
 
       #logo {
@@ -58,9 +142,8 @@
       }
 
       #menu {
-        font-family: bebas_neue_regular;
-        font-size: 20px;
-        padding-top: 52px;
+        font-size: 23px;
+        letter-spacing: 1px;
       }
 
       #menu nav {
@@ -68,35 +151,74 @@
         padding: 0 15px;
       }
 
-      #arrow {
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
+      #menu-mobile {
+        display: none;
+        margin: 0 auto;
+        font-size: 15px;
       }
 
-      #arrow i {
-        font-size: 4rem;
+      #menu-mobile nav {
+        display: inline-block;
+        padding: 0 15px;
+        margin-bottom: 10px;
       }
 
+      @media only screen and (min-width:320px) {
+        #logo {
+          text-align: center;
+        }
+
+        #menu {
+          display: none;
+        }
+
+        #logo {
+          position: relative;
+        }
+
+        #menu-mobile {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width:990px) {
+        #menu-mobile {
+          display: none;
+        }
+
+        #logo {
+          position: absolute;
+        }
+
+        #menu {
+          display: block;
+        }
+      }
     </style>
-    <link rel="preload" href="common/all-fad34dd401.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="common/all-fad34dd401.min.css"></noscript>
+    <link rel="preload" href="common/all-bd16f38cc0.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="common/all-bd16f38cc0.min.css"></noscript>
     <script>!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
   </head>
-  <body>
+  <body data-ng-class="{'gradient':shell.menu == 'privacy' || shell.menu == 'faq' }">
     <div id="main">
-      <div id="arrow"><i class="fa fa-arrow-down" data-ng-show="shell.menu != 'contact'"></i><i class="fa fa-arrow-up" data-ng-show="shell.menu == 'contact'"></i></div>
-      <div id="header">
-        <div id="logo"><img data-ng-src="common/images/logo.png"></div>
+      <div id="header" data-ng-class="{'hide-it':shell.menu == 'privacy' || shell.menu == 'faq' }">
+        <div id="logo"><a ui-sref="home"><img data-ng-src="common/images/logo.png"></a></div>
+        <div id="menu-mobile">
+          <nav><a ui-sref="home" data-ng-class="{'active':shell.menu =='home'}">Inicio</a></nav>
+          <nav><a ui-sref="company" data-ng-class="{'active':shell.menu =='company'}">Empresa</a></nav>
+          <nav><a ui-sref="services" data-ng-class="{'active':shell.menu =='services'}">Servicios</a></nav>
+          <nav><a ui-sref="distributor" data-ng-class="{'active':shell.menu =='distributor'}">¿Cómo ser distribuidor?</a></nav>
+          <nav><a ui-sref="contact" data-ng-class="{'active':shell.menu =='contact'}">Contacto</a></nav>
+        </div>
         <div class="clearfix" id="menu">
-          <nav><a ui-sref="contact" data-ng-class="{'active':shell.menu =='contact'}">contacto</a></nav>
-          <nav><a ui-sref="distributor" data-ng-class="{'active':shell.menu =='distributor'}">¿Comó ser distribuidor?</a></nav>
+          <nav><a ui-sref="contact" data-ng-class="{'active':shell.menu =='contact'}">Contacto</a></nav>
+          <nav><a ui-sref="distributor" data-ng-class="{'active':shell.menu =='distributor'}">¿Cómo ser distribuidor?</a></nav>
           <nav><a ui-sref="services" data-ng-class="{'active':shell.menu =='services'}">Servicios</a></nav>
           <nav><a ui-sref="company" data-ng-class="{'active':shell.menu =='company'}">Empresa</a></nav>
           <nav><a ui-sref="home" data-ng-class="{'active':shell.menu =='home'}">Inicio</a></nav>
         </div>
       </div>
-      <ui-view class="height-100"></ui-view>
+      <ui-view class="height-100 anim-in-out anim-fade" data-anim-speed="500"></ui-view>
     </div>
     <!-- clear:js-->
     
@@ -111,8 +233,8 @@
   // endinject //
     $script([
       // inject:js //
-      '/vendor-e17cec4b4e.min.js',
-      '/all-2a5e1062cc.min.js'
+      '/vendor-15088dfe2c.min.js',
+      '/all-83a57d1f25.min.js'
       // endinject //
     ], 
     function() {

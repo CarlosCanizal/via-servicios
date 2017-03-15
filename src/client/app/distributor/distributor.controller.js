@@ -11,11 +11,11 @@
     
     var distributor =  this;
     distributor.info = {
-      name: "The Comics' Society",
-      address: "Juarez #32",
-      email: "carlos@canizal.com",
-      contact: "Carlos Canizal",
-      phone: "5535068102"
+      name: null,
+      address: null,
+      email: null,
+      contact: null,
+      phone: null
     };
 
     distributor.error = false;

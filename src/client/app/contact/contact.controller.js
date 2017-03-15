@@ -11,9 +11,9 @@
     
     var contact =  this;
     contact.info = {
-      name: "Carlos Canizal",
-      email: "email",
-      message : "mensaje"
+      name: null,
+      email: null,
+      message : null
     };
 
     contact.error = false;

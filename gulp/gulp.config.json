@@ -3,30 +3,39 @@
   "htmlTemplates": "src/client/app/**/*.html",
   "jsonTemplates": "src/client/app/**/*.json",
   "vendorJs": [
-    "src/client/bower_components/angular/angular.js",
-    "src/client/bower_components/angular-ui-router/release/angular-ui-router.js"
+    "src/client/bower_components/angular/angular.min.js",
+    "src/client/bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "src/client/bower_components/angular-animate/angular-animate.min.js",
+    "src/client/bower_components/jquery/dist/jquery.min.js",
+    "src/client/bower_components/angular-ui-router-anim-in-out/anim-in-out.js",
+    "src/client/bower_components/lodash/dist/lodash.min.js",
+    "src/client/bower_components/restangular/dist/restangular.min.js"
   ],
   "vendorCss": [
+    "src/client/bower_components/bootstrap/dist/css/bootstrap.min.css",
+    "src/client/bower_components/font-awesome/css/font-awesome.min.css",
+    "src/client/bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css"
   ],
   "asyncLoaders": [
     "src/client/bower_components/angular-loader/angular-loader.js",
     "src/client/bower_components/script.js/dist/script.js"
   ],
   "css": [
-    "src/client/common/styles/*.css"
+    "src/client/common/styles/**/*.css"
   ],
   "images": [
     "src/client/common/images/**/*"
   ],
   "js": [
     "src/client/app/**/*module*.js",
-    "src/client/app/**/*.js"
+    "src/client/app/**/*.js",
+    "src/client/common/keys/production.keys.js"
   ],
   "fonts": [
     "src/client/common/styles/fonts/**/*"
   ],
-  "conekta": [
-    "src/client/common/js/conekta.js" 
+  "awesomeFonts": [
+    "src/client/bower_components/font-awesome/fonts/*"
   ],
   "sass": [
     "src/client/common/**/*.sass",
@@ -34,6 +43,9 @@
   ],
   "pug": [
     "src/client/**/*.pug" 
+  ],
+  "sitemap": [
+    "src/client/sitemap.xml" 
   ],
   "report": "report/",
   "build": "./build/"
