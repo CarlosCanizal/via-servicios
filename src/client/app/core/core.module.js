@@ -5,6 +5,8 @@
     'ui.router',
     'restangular',
     'anim-in-out',
+    'ngMap',
+    'ngGeolocation',
     'app.core'
   ]);
 })();
