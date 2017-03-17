@@ -33,6 +33,9 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
             a(ui-sref="company",data-ng-class="{'active':shell.menu =='company'}")
               |Empresa
           nav
+            a(ui-sref="geolocation",data-ng-class="{'active':shell.menu =='geolocation'}")
+              |Puntos Via
+          nav
             a(ui-sref="services",data-ng-class="{'active':shell.menu =='services'}")
               |Servicios
           nav
@@ -48,6 +51,9 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
           nav
             a(ui-sref="distributor",data-ng-class="{'active':shell.menu =='distributor'}")
               |¿Cómo ser distribuidor?
+          nav
+            a(ui-sref="geolocation",data-ng-class="{'active':shell.menu =='geolocation'}")
+              |Puntos Via
           nav
             a(ui-sref="services",data-ng-class="{'active':shell.menu =='services'}")
               |Servicios
@@ -67,6 +73,10 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
     script(src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js")
     script(src="bower_components/lodash/dist/lodash.min.js")
     script(src="bower_components/restangular/dist/restangular.min.js")
+    script(src="bower_components/ngmap/build/scripts/ng-map.min.js")
+    script(src="bower_components/ngGeolocation/ngGeolocation.js")
+    script(src="http://maps.google.com/maps/api/js")
+
 
     
     //Modules
@@ -86,6 +96,7 @@ html(data-ng-app="app", data-ng-controller="Shell as shell")
     script(src="app/services/services.controller.js")
     script(src="app/distributor/distributor.controller.js")
     script(src="app/contact/contact.controller.js")
+    script(src="app/geolocation/geolocation.controller.js")
 
     // endinject
 

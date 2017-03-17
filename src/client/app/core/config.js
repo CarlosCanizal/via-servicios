@@ -54,6 +54,15 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
         menu : 'contact'
       }
     })
+    .state('geolocation',{
+      url:'/puntos-via',
+      templateUrl : 'app/geolocation/geolocation.template.html',
+      controller: 'Geolocation',
+      controllerAs: 'geolocation',
+      data:{
+        menu : 'geolocation'
+      }
+    })
     .state('confidenciality',{
       url:'/confidencialidad',
       templateUrl : 'app/confidencialidad/confidencialidad.template.html'
@@ -72,6 +81,7 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
         menu : 'faq'
       }
     })
+
       
   $urlRouterProvider.otherwise('/');
 }
