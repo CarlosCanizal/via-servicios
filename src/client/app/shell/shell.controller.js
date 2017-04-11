@@ -23,6 +23,10 @@
       $scope.sectionIndex = $scope.sections.indexOf(shell.menu);
     });
 
+    shell.back = function(){
+      $window.history.back();
+    }
+
     // $(window).on('mousewheel DOMMouseScroll',debounce(function (e) {
     //   var direction = (function () {
     //     var delta = (e.type === 'DOMMouseScroll' ?

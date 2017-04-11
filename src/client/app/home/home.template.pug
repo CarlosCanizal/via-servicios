@@ -73,3 +73,4 @@
         .navs.clearfix
           nav(data-ng-repeat="n in home.getNumber(home.items) track by $index", data-ng-class="{'active':home.selected == $index}", data-ng-click="home.selectIt($index)")
             span
+  div(data-ng-include="'app/footer/footer.template.html'")

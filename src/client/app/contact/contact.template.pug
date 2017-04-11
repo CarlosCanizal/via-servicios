@@ -20,13 +20,6 @@
                 .input-row.left.align-right
                   button(type="submit")
                     |ENVIAR
-                .privacy
-                  nav.separator
-                    a(ui-sref="privacy")
-                      |PRIVACIDAD
-                  nav.separator-left
-                    a(ui-sref="faq")
-                      |PREGUNTAS FRECUENTES
             .col-xs-12.col-md-6
               .text-box
                 div
@@ -47,3 +40,4 @@
                   i.fa.fa-instagram
                 a(href="https://twitter.com/ViaServiciosMex" target="_blank")
                   i.fa.fa-twitter
+  div(data-ng-include="'app/footer/footer.template.html'")

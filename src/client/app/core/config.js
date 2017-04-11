@@ -65,7 +65,10 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
     })
     .state('confidenciality',{
       url:'/confidencialidad',
-      templateUrl : 'app/confidencialidad/confidencialidad.template.html'
+      templateUrl : 'app/confidencialidad/confidencialidad.template.html',
+      data:{
+        menu : 'confidenciality'
+      }
     })
     .state('privacy',{
       url:'/privacidad',

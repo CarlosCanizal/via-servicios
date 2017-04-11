@@ -9,12 +9,13 @@ body
   background: url('/common/images/background.png')
   margin: 0
   padding: 0
-  color: $text-color
+  color: $text-color !important
   &.gradient
     background: linear-gradient(125deg, rgba(255,255,255,1) 0%, rgba(199,199,199,1) 100%) fixed
 
 .height-100
   height: 100%
+  height: 600px
 
 [class*="col-"]
   padding: 0
@@ -25,6 +26,7 @@ body
 .view-container
   width: 100%
   position: absolute
+  min-height: 600px
 
 .general-container
   width: 100%
@@ -40,14 +42,15 @@ body
 a,a:link,a:active, a:hover, a:visited
   text-decoration: none
   outline: none
-  color: $text-color
-
+  color: $text-color !important
+  text-decoration: none !important
 *
   // outline: solid 1px red
 /*general*/
 
 /*header*/
 #main
+  height: 100%
   width: 70%
   margin: 0 auto
   position: relative
@@ -204,22 +207,22 @@ ul.list
       position: relative
       overflow: hidden
       &.banner1
-        height: 400px
+        height: 350px
         background: url(/common/images/banner1.png) no-repeat
         background-position: bottom
         background-size: 100% auto
       &.banner2
-        height: 400px
+        height: 350px
         background: url(/common/images/banner2.png) no-repeat
         background-position: bottom
         background-size: 100% auto
       &.banner3
-        height: 400px
+        height: 350px
         background: url(/common/images/banner3.png) no-repeat
         background-position: bottom
         background-size: 100% auto
       &.banner4
-        height: 400px
+        height: 350px
         background: url(/common/images/banner4.png) no-repeat
         background-position: bottom
         background-size: 100% auto
@@ -258,7 +261,7 @@ ul.list
         img
           width: 90%
   .navs-container
-    margin-top: 30px
+    margin-top: 0px
     text-align: center
     .navs
       // outline: solid 1px blue
@@ -354,9 +357,13 @@ img.service-img
   font-family: 'montserrat_thin'
 
 .privacy
-  margin-top: 30px
+  margin-top: 100px
   font-family: 'montserrat_thin'
-  text-align: left
+  text-align: center
+  width: 100%
+  position: absolute;
+  bottom: -50px
+
   nav
     display: inline
     &.separator
@@ -381,6 +388,7 @@ img.service-img
     font-size: 1rem
 
 a.close-button
+  cursor: pointer;
   display: block
   width: 20px
   height: 20px
@@ -397,9 +405,6 @@ a.close-button
 
 .privacy-container
   background: linear-gradient(125deg, rgba(255,255,255,1) 0%, rgba(199,199,199,1) 100%) fixed
-
-a.underline
-  text-decoration: underline
 
 #services-carousel
   nav.item
@@ -427,3 +432,6 @@ a.underline
   margin-top: 100px
   height: 400px
   width: 100%
+
+a.underline
+  text-decoration: underline !important

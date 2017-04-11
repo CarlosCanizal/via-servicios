@@ -7,6 +7,129 @@
     <link rel="shortcut icon" type="image/png" href="common/images/favicon.png">
     <meta charset="utf-8">
     <style type="text/css">
+      .height-100,
+      body,
+      html {
+        height: 100%;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      #menu,
+      #menu-mobile {
+        font-family: bebas_neue_regular;
+        padding-top: 52px;
+      }
+
+      #menu-mobile {
+        text-align: center;
+      }
+
+      @font-face {
+        font-family: bebas_neue_regular;
+        src: url(common/fonts/bebasneue_regular-webfont.woff2) format("woff2"),url(common/fonts/bebasneue_regular-webfont.woff) format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background: url(/common/images/background.png);
+        margin: 0;
+        color: #FFF!important;
+      }
+
+      .height-100 {
+        height: 600px;
+      }
+
+      #header,
+      #main {
+        position: relative;
+      }
+
+      a,
+      a:visited {
+        outline: 0;
+        color: #FFF!important;
+        text-decoration: none!important;
+      }
+
+      #main {
+        height: 100%;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      #header {
+        padding: 20px 0;
+      }
+
+      #logo {
+        position: absolute;
+        top: 20px;
+        left: 0;
+      }
+
+      #logo img {
+        width: 110px;
+      }
+
+      #menu {
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      #menu nav {
+        float: right;
+        padding: 0 15px;
+      }
+
+      #menu-mobile {
+        display: none;
+        margin: 0 auto;
+        font-size: 15px;
+      }
+
+      #menu-mobile nav {
+        display: inline-block;
+        padding: 0 15px;
+        margin-bottom: 10px;
+      }
+
+      @media only screen and (min-width:320px) {
+        #logo {
+          text-align: center;
+        }
+
+        #menu {
+          display: none;
+        }
+
+        #logo {
+          position: relative;
+        }
+
+        #menu-mobile {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width:990px) {
+        #menu-mobile {
+          display: none;
+        }
+
+        #logo {
+          position: absolute;
+        }
+
+        #menu {
+          display: block;
+        }
+      }
+
       html {
         font-family: sans-serif;
         -webkit-text-size-adjust: 100%;
@@ -76,132 +199,14 @@
       @-ms-viewport {
         width: device-width;
       }
-
-      .height-100,
-      body,
-      html {
-        height: 100%;
-      }
-
-      body {
-        padding: 0;
-      }
-
-      #menu,
-      #menu-mobile {
-        font-family: bebas_neue_regular;
-        padding-top: 52px;
-      }
-
-      #menu-mobile {
-        text-align: center;
-      }
-
-      @font-face {
-        font-family: bebas_neue_regular;
-        src: url(common/fonts/bebasneue_regular-webfont.woff2) format("woff2"),url(common/fonts/bebasneue_regular-webfont.woff) format("woff");
-        font-weight: 400;
-        font-style: normal;
-      }
-
-      body {
-        background: url(/common/images/background.png);
-        margin: 0;
-        color: #FFF;
-      }
-
-      #header,
-      #main {
-        position: relative;
-      }
-
-      a,
-      a:visited {
-        text-decoration: none;
-        outline: 0;
-        color: #FFF;
-      }
-
-      #main {
-        width: 70%;
-        margin: 0 auto;
-      }
-
-      #header {
-        padding: 20px 0;
-      }
-
-      #logo {
-        position: absolute;
-        top: 20px;
-        left: 0;
-      }
-
-      #logo img {
-        width: 110px;
-      }
-
-      #menu {
-        font-size: 23px;
-        letter-spacing: 1px;
-      }
-
-      #menu nav {
-        float: right;
-        padding: 0 15px;
-      }
-
-      #menu-mobile {
-        display: none;
-        margin: 0 auto;
-        font-size: 15px;
-      }
-
-      #menu-mobile nav {
-        display: inline-block;
-        padding: 0 15px;
-        margin-bottom: 10px;
-      }
-
-      @media only screen and (min-width:320px) {
-        #logo {
-          text-align: center;
-        }
-
-        #menu {
-          display: none;
-        }
-
-        #logo {
-          position: relative;
-        }
-
-        #menu-mobile {
-          display: block;
-        }
-      }
-
-      @media only screen and (min-width:990px) {
-        #menu-mobile {
-          display: none;
-        }
-
-        #logo {
-          position: absolute;
-        }
-
-        #menu {
-          display: block;
-        }
-      }
     </style>
-    <link rel="preload" href="common/all-bd16f38cc0.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="common/all-bd16f38cc0.min.css"></noscript>
+    <link rel="preload" href="common/all-5cf29828c4.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="common/all-5cf29828c4.min.css"></noscript>
     <script>!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
   </head>
-  <body data-ng-class="{'gradient':shell.menu == 'privacy' || shell.menu == 'faq' }">
+  <body data-ng-class="{'gradient':shell.menu == 'privacy' || shell.menu == 'faq' || shell.menu == 'confidenciality' }">
     <div id="main">
-      <div id="header" data-ng-class="{'hide-it':shell.menu == 'privacy' || shell.menu == 'faq' }">
+      <div id="header" data-ng-class="{'hide-it':shell.menu == 'privacy' || shell.menu == 'faq' || shell.menu == 'confidenciality' }">
         <div id="logo"><a ui-sref="home"><img data-ng-src="common/images/logo.png"></a></div>
         <div id="menu-mobile">
           <nav><a ui-sref="home" data-ng-class="{'active':shell.menu =='home'}">Inicio</a></nav>
@@ -234,7 +239,7 @@
     $script([
       // inject:js //
       '/vendor-15088dfe2c.min.js',
-      '/all-83a57d1f25.min.js'
+      '/all-8d5688b031.min.js'
       // endinject //
     ], 
     function() {

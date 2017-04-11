@@ -114,3 +114,4 @@
         .navs.clearfix
           nav(data-ng-repeat="n in services.getNumber(services.items) track by $index", data-ng-class="{'active':services.selected == $index}", data-ng-click="services.selectIt($index)")
             span
+  div(data-ng-include="'app/footer/footer.template.html'")
